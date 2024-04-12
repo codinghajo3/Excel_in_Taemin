@@ -16,4 +16,4 @@ PW(미정)
 
 3. delete data
 QXlsx, openXlsx 등
-xlsx직접사용에서 scv파일 사용으로 변경
+xlsx직접사용에서 scv사용으로 변경
