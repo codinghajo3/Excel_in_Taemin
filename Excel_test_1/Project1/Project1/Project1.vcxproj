@@ -127,7 +127,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="CSVProcessor.cpp" />
+    <ClCompile Include="CSVProcessor.h" />
+    <ClCompile Include="CSVReader.cpp" />
+    <ClCompile Include="CSVReader.h" />
+    <ClCompile Include="DataFinder.cpp" />
     <ClCompile Include="FileName.cpp" />
+    <ClCompile Include="main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="DataFinder.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
