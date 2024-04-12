@@ -13,3 +13,7 @@ PW(미정)
 파일 읽기
 행, 열 구분
 특정 정보 찾기(이름 등)
+
+3. delete data
+QXlsx, openXlsx 등
+xlsx직접사용에서 scv파일 사용으로 변경

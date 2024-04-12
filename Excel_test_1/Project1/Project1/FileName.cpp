@@ -4,18 +4,20 @@
 #include <vector>
 #include <string>
 
+using namespace std; // std 네임스페이스를 사용하겠다고 선언
+
 // CSV 파일을 읽는 함수
-std::vector<std::vector<std::string>> readCSV(const std::string& filename) {
-    std::ifstream file(filename);
-    std::vector<std::vector<std::string>> data;
+vector<vector<string>> readCSV(const string& filename) {
+    ifstream file(filename);
+    vector<vector<string>> data;
 
-    std::string line;
-    while (std::getline(file, line)) {
-        std::stringstream lineStream(line);
-        std::string cell;
-        std::vector<std::string> rowData;
+    string line;
+    while (getline(file, line)) {
+        stringstream lineStream(line);
+        string cell;
+        vector<string> rowData;
 
-        while (std::getline(lineStream, cell, ',')) {
+        while (getline(lineStream, cell, ',')) {
             rowData.push_back(cell);
         }
 
@@ -26,8 +28,8 @@ std::vector<std::vector<std::string>> readCSV(const std::string& filename) {
 }
 
 // CSV 파일에 데이터를 쓰는 함수
-void writeCSV(const std::string& filename, const std::vector<std::vector<std::string>>& data) {
-    std::ofstream file(filename);
+void writeCSV(const string& filename, const vector<vector<string>>& data) {
+    ofstream file(filename);
 
     for (const auto& row : data) {
         for (size_t i = 0; i < row.size(); ++i) {
@@ -44,21 +46,20 @@ void writeCSV(const std::string& filename, const std::vector<std::vector<std::st
 
 int main() {
     // 현재 실행 파일이 위치한 디렉토리
-    std::string currentDirectory = "./";
+    string currentDirectory = "./";
 
     // CSV 파일 읽기 예제
-    std::vector<std::vector<std::string>> readData = readCSV(currentDirectory + "test1.csv");
+    vector<vector<string>> readData = readCSV(currentDirectory + "test1.csv");
     for (const auto& row : readData) {
         for (const auto& cell : row) {
-            std::cout << cell << "\t";
+            cout << cell << "\t";
         }
-        std::cout << std::endl;
+        cout << endl;
     }
 
     // CSV 파일 쓰기 예제
-    std::vector<std::vector<std::string>> writeData = { {"No.","이름","성별","나이","전화번호","방문횟수","ID","PW(X)"}, {"1","김태민","1","23","01032343245","2","",""} };
+    vector<vector<string>> writeData = { {"No.","이름","성별","나이","전화번호","방문횟수","ID","PW(X)"}, {"1","김태민","1","23","01032343245","2","",""} };
     writeCSV(currentDirectory + "test1.csv", writeData);
 
     return 0;
 }
-
