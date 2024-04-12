@@ -3,7 +3,7 @@
 #include <sstream>
 #include <vector>
 #include <string>
-//깃허브 테스트
+
 // CSV 파일을 읽는 함수
 std::vector<std::vector<std::string>> readCSV(const std::string& filename) {
     std::ifstream file(filename);
@@ -44,7 +44,7 @@ void writeCSV(const std::string& filename, const std::vector<std::vector<std::st
 
 int main() {
     // CSV 파일 읽기 예제
-    std::vector<std::vector<std::string>> readData = readCSV("example.csv");
+    std::vector<std::vector<std::string>> readData = readCSV("test1.csv");
     for (const auto& row : readData) {
         for (const auto& cell : row) {
             std::cout << cell << "\t";

@@ -56,8 +56,8 @@ int main() {
     }
 
     // CSV 파일 쓰기 예제
-    std::vector<std::vector<std::string>> writeData = { {"Name", "Age", "City"}, {"John", "25", "New York"}, {"Alice", "30", "Los Angeles"} };
-    writeCSV(currentDirectory + "output.csv", writeData);
+    std::vector<std::vector<std::string>> writeData = { {"No.","이름","성별","나이","전화번호","방문횟수","ID","PW(X)"}, {"1","김태민","1","23","01032343245","2","",""}};
+    writeCSV(currentDirectory + "test1.csv", writeData);
 
     return 0;
 }
