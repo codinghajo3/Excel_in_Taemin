@@ -16,4 +16,9 @@ PW(미정)
 
 3. delete data
 QXlsx, openXlsx 등
-xlsx직접사용에서 scv사용으로 변경
+xlsx직접사용에서 csv사용으로 변경
+
+
+project1-csv로 읽기
+project2-libxl로 읽기
+project3-calendar
